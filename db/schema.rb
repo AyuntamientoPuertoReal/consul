@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171003223152) do
+ActiveRecord::Schema.define(version: 20170918231410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -549,17 +549,6 @@ ActiveRecord::Schema.define(version: 20171003223152) do
 
   add_index "managers", ["user_id"], name: "index_managers_on_user_id", using: :btree
 
-  create_table "map_locations", force: :cascade do |t|
-    t.float   "latitude"
-    t.float   "longitude"
-    t.integer "zoom"
-    t.integer "proposal_id"
-    t.integer "investment_id"
-  end
-
-  add_index "map_locations", ["investment_id"], name: "index_map_locations_on_investment_id", using: :btree
-  add_index "map_locations", ["proposal_id"], name: "index_map_locations_on_proposal_id", using: :btree
-
   create_table "moderators", force: :cascade do |t|
     t.integer "user_id"
   end
@@ -639,6 +628,7 @@ ActiveRecord::Schema.define(version: 20171003223152) do
   end
 
   add_index "poll_officer_assignments", ["booth_assignment_id"], name: "index_poll_officer_assignments_on_booth_assignment_id", using: :btree
+  add_index "poll_officer_assignments", ["officer_id", "date"], name: "index_poll_officer_assignments_on_officer_id_and_date", using: :btree
   add_index "poll_officer_assignments", ["officer_id"], name: "index_poll_officer_assignments_on_officer_id", using: :btree
 
   create_table "poll_officers", force: :cascade do |t|
@@ -689,25 +679,6 @@ ActiveRecord::Schema.define(version: 20171003223152) do
   add_index "poll_questions", ["proposal_id"], name: "index_poll_questions_on_proposal_id", using: :btree
   add_index "poll_questions", ["tsv"], name: "index_poll_questions_on_tsv", using: :gin
 
-  create_table "poll_recounts", force: :cascade do |t|
-    t.integer "author_id"
-    t.string  "origin"
-    t.date    "date"
-    t.integer "booth_assignment_id"
-    t.integer "officer_assignment_id"
-    t.text    "officer_assignment_id_log", default: ""
-    t.text    "author_id_log",             default: ""
-    t.integer "white_amount",              default: 0
-    t.text    "white_amount_log",          default: ""
-    t.integer "null_amount",               default: 0
-    t.text    "null_amount_log",           default: ""
-    t.integer "total_amount",              default: 0
-    t.text    "total_amount_log",          default: ""
-  end
-
-  add_index "poll_recounts", ["booth_assignment_id"], name: "index_poll_recounts_on_booth_assignment_id", using: :btree
-  add_index "poll_recounts", ["officer_assignment_id"], name: "index_poll_recounts_on_officer_assignment_id", using: :btree
-
   create_table "poll_shifts", force: :cascade do |t|
     t.integer  "booth_id"
     t.integer  "officer_id"
@@ -716,10 +687,9 @@ ActiveRecord::Schema.define(version: 20171003223152) do
     t.datetime "updated_at"
     t.string   "officer_name"
     t.string   "officer_email"
-    t.integer  "task",          default: 0, null: false
   end
 
-  add_index "poll_shifts", ["booth_id", "officer_id", "date", "task"], name: "index_poll_shifts_on_booth_id_and_officer_id_and_date_and_task", unique: true, using: :btree
+  add_index "poll_shifts", ["booth_id", "officer_id"], name: "index_poll_shifts_on_booth_id_and_officer_id", using: :btree
   add_index "poll_shifts", ["booth_id"], name: "index_poll_shifts_on_booth_id", using: :btree
   add_index "poll_shifts", ["officer_id"], name: "index_poll_shifts_on_officer_id", using: :btree
 
@@ -751,8 +721,6 @@ ActiveRecord::Schema.define(version: 20171003223152) do
     t.integer  "answer_id"
     t.integer  "officer_assignment_id"
     t.integer  "user_id"
-    t.string   "origin"
-    t.integer  "officer_id"
   end
 
   add_index "poll_voters", ["booth_assignment_id"], name: "index_poll_voters_on_booth_assignment_id", using: :btree
@@ -783,8 +751,6 @@ ActiveRecord::Schema.define(version: 20171003223152) do
     t.datetime "ends_at"
     t.boolean  "published",          default: false
     t.boolean  "geozone_restricted", default: false
-    t.text     "summary"
-    t.text     "description"
   end
 
   add_index "polls", ["starts_at", "ends_at"], name: "index_polls_on_starts_at_and_ends_at", using: :btree
@@ -1148,8 +1114,6 @@ ActiveRecord::Schema.define(version: 20171003223152) do
   add_foreign_key "poll_questions", "polls"
   add_foreign_key "poll_questions", "proposals"
   add_foreign_key "poll_questions", "users", column: "author_id"
-  add_foreign_key "poll_recounts", "poll_booth_assignments", column: "booth_assignment_id"
-  add_foreign_key "poll_recounts", "poll_officer_assignments", column: "officer_assignment_id"
   add_foreign_key "poll_voters", "polls"
   add_foreign_key "poll_white_results", "poll_booth_assignments", column: "booth_assignment_id"
   add_foreign_key "poll_white_results", "poll_officer_assignments", column: "officer_assignment_id"

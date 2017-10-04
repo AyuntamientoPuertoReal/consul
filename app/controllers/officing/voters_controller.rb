@@ -12,9 +12,7 @@ class Officing::VotersController < Officing::BaseController
     @voter = Poll::Voter.new(document_type:   @user.document_type,
                              document_number: @user.document_number,
                              user: @user,
-                             poll: @poll,
-                             origin: "booth",
-                             officer: current_user.poll_officer)
+                             poll: @poll)
     @voter.save!
   end
 
