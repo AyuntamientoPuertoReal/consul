@@ -250,6 +250,8 @@ Rails.application.routes.draw do
     end
 
     resources :settings, only: [:index, :update]
+    put :update_map, to: "settings#update_map"
+
     resources :moderators, only: [:index, :create, :destroy] do
       get :search, on: :collection
     end
@@ -271,9 +273,7 @@ Rails.application.routes.draw do
 
     scope module: :poll do
       resources :polls do
-        get :search_questions, on: :member
         patch :add_question, on: :member
-        patch :remove_question, on: :member
 
         resources :booth_assignments, only: [:index, :show, :create, :destroy] do
           get :search_booths, on: :collection
