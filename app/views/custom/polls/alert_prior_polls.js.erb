@@ -82,7 +82,8 @@ document.onload
     <% end %>
 
     //Comprobamos si todos los botones se han pulsado
-    if(arrayChildrenOf_FatherOfAllAnswer.length == arrayChildChoosen.length)
+    //if(arrayChildrenOf_FatherOfAllAnswer.length == arrayChildChoosen.length)
+    if(arrayChildrenOf_FatherOfAllAnswer.length <= arrayChildChoosen.length+1)
     {
         isAllButtonPush = true;
     }
@@ -156,10 +157,14 @@ document.onload
         myAlert.className = "primary callout row";
         myAlert2.className = "primary callout row";
 
-        parr.innerHTML =
-            "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
-            "<br>Solo se aceptarán las votaciones con TODAS LAS PROPUESTAS PUNTUADAS."+
-            "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
+      //parr.innerHTML =
+      //  "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
+      //  "<br>Solo se aceptarán las votaciones con TODAS LAS PROPUESTAS PUNTUADAS."+
+      //  "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
+
+      parr.innerHTML =
+        "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
+        "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" PROPUESTAS PUNTUADAS.<br></b>";
 
     }
 
@@ -171,12 +176,16 @@ document.onload
         myAlert.className = "alert callout row";
         myAlert2.className = "alert callout row";
 
-        parr.innerHTML =
-            "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
-            "<br>Solo se aceptarán las votaciones con TODAS LAS PROPUESTAS PUNTUADAS."+
-            "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b><br>";
+      //parr.innerHTML =
+      //  "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
+      //  "<br>Solo se aceptarán las votaciones con TODAS LAS PROPUESTAS PUNTUADAS."+
+      //  "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
 
-        switch (typeMessage)
+      parr.innerHTML =
+        "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
+        "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" PROPUESTAS PUNTUADAS.<br></b>";
+
+      switch (typeMessage)
         {
             case 1:
                 parr.innerHTML += "<b style='color:red;'>Su votación no está correctamente cumplimentada.</b><br><span style='color:red;'>" +
