@@ -13,12 +13,20 @@
         <!--<%= link_to t("layouts.header.more_info"), more_info_path %>-->
       </p>
       <div class="small-12 medium-12">
+        <!--
         <div class="small-12 medium-5" style="float: left;">
           <%= link_to t("layouts.header.see_all"), proposals_path, class: "button see-more expanded" %>
         </div>
         <div class="small-12 medium-5" style="float: right;">
           <%= link_to "Resultados Priorización", "PriorizacionOct17", class: "button see-more expanded" %>
         </div>
+        -->
+
+        <div class="small-12 medium-12" style="float: left;">
+          <%= image_tag(image_path_for("Banner.jpg"), size: "788x285", alt:"") %>
+          <%= link_to "Participa en la votación a partir del día 9", "", class: "button see-more expanded" %>
+        </div>
+
       </div>
     </div>
 
