@@ -64,6 +64,9 @@ document.onload
     var childrens = document.getElementById("<%= dom_id(question) %>_answers").children;
     arrayChildAnswer = childrens[0].children;
 
+    var Texto = "";
+    var TamañoTexto = 0;
+
     if(isClearArrayContElementChoosen == false) {
         arrayContElementChoosen = new Array(arrayChildAnswer.length);
         arrayContElementChoosen.fill(0);
@@ -163,8 +166,8 @@ document.onload
       //  "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
 
       parr.innerHTML =
-        "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
-        "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" PROPUESTAS PUNTUADAS.<br></b>";
+        "<b>Indique del 1 al " + arrayChildAnswer.length + ", POR ORDEN DE PREFERENCIA, un valor distinto en cada opción." +
+        "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" OPCIONES PUNTUADAS.<br></b>";
 
     }
 
@@ -182,14 +185,14 @@ document.onload
       //  "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
 
       parr.innerHTML =
-        "<b>Indique del 1 al " + arrayChildAnswer.length + ", por orden de preferencia, qué propuestas de las siguientes considera más prioritarias" +
-        "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" PROPUESTAS PUNTUADAS.<br></b>";
+        "<b>Indique del 1 al " + arrayChildAnswer.length + ", POR ORDEN DE PREFERENCIA, un valor distinto en cada opción." +
+        "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" OPCIONES PUNTUADAS.<br></b>";
 
       switch (typeMessage)
         {
             case 1:
                 parr.innerHTML += "<b style='color:red;'>Su votación no está correctamente cumplimentada.</b><br><span style='color:red;'>" +
-                    "Debe seleccionar un valor distinto en cada pregunta. " +
+                    "Debe seleccionar un valor distinto en cada opción. " +
                     "Corrija los errores:" +
                     "</span>" +
                     "<br><span style='display: inline-block; line-height: 1.2rem;' class='callout margin-top' id='summaryAnswer'></span>";
@@ -208,9 +211,17 @@ document.onload
                             var arrayChildrensGrandfather = arrayChildChoosenOrdenado[zy].parentElement.parentElement.parentElement.children;
                             var titleQuestion = arrayChildrensGrandfather[0].children;
 
-                            document.getElementById("summaryAnswer").innerHTML =
+                          Texto="";
+                          TamañoTexto = titleQuestion[0].innerHTML.length;
+                          if(titleQuestion[0].innerHTML.substr(TamañoTexto-7) == "(+info)")
+                          {
+                            Texto = titleQuestion[0].innerHTML.substr(0,TamañoTexto-7);
+                          }
+
+
+                          document.getElementById("summaryAnswer").innerHTML =
                                 document.getElementById("summaryAnswer").innerHTML +
-                                "<i style='color:red;'>" + arrayChildChoosenOrdenado[zy].innerHTML + ": " + titleQuestion[0].innerHTML + "</i><br>";
+                                "<i style='color:red;'>" + arrayChildChoosenOrdenado[zy].innerHTML + ": " + Texto + "</i><br>";
                         }
                     }
                 }
@@ -218,14 +229,14 @@ document.onload
                 break;
             case 2:
                 parr.innerHTML += "<b style='color:red;'>Su votación no está correctamente cumplimentada.</b><br><span style='color:red;'>" +
-                    "Debe seleccionar un valor en cada propuesta.</span>";
+                    "Debe seleccionar un valor en cada opción.</span>";
 
                 break;
             case 3:
                 parr.innerHTML += "<b style='color:red;'>Su votación no está correctamente cumplimentada.</b>" +
-                    "<br><span style='color:red;'>Debe seleccionar un valor en cada propuesta.</span>" +
+                    "<br><span style='color:red;'>Debe seleccionar un valor en cada opción.</span>" +
                     "<br><span style='color:red;'>" +
-                    "Debe seleccionar un valor distinto en cada pregunta. " +
+                    "Además, debe seleccionar un valor distinto en cada opción. " +
                     "Corrija los errores:" +
                     "</span>" +
                     "<br><span style='display: inline-block; line-height: 1.2rem;' class='callout margin-top' id='summaryAnswer'></span>";
@@ -245,9 +256,18 @@ document.onload
                             var arrayChildrensGrandfather = arrayChildChoosenOrdenado[zy2].parentElement.parentElement.parentElement.children;
                             var titleQuestion = arrayChildrensGrandfather[0].children;
 
-                            document.getElementById("summaryAnswer").innerHTML =
+
+                          Texto="";
+                          TamañoTexto = titleQuestion[0].innerHTML.length;
+                          if(titleQuestion[0].innerHTML.substr(TamañoTexto-7) == "(+info)")
+                          {
+                            Texto = titleQuestion[0].innerHTML.substr(0,TamañoTexto-7);
+                          }
+
+
+                          document.getElementById("summaryAnswer").innerHTML =
                                 document.getElementById("summaryAnswer").innerHTML +
-                                "<i style='color:red;'>" + arrayChildChoosenOrdenado[zy2].innerHTML + ": " + titleQuestion[0].innerHTML + "</i><br>";
+                                "<i style='color:red;'>" + arrayChildChoosenOrdenado[zy2].innerHTML + ": " + Texto + "</i><br>";
                         }
                     }
                 }
@@ -264,7 +284,7 @@ document.onload
         myAlert.className = "success callout row";
         myAlert2.className = "success callout row";
 
-        parr.innerHTML = "<b style='color:#21610B;'>Su votación es válida. Ha votado esta priorización:" +
+        parr.innerHTML = "<b style='color:#21610B;'>Su votación es válida. Ha votado el siguiente orden de preferencia:" +
             "</b><br><span style='display: inline-block; line-height: 1.2rem;' class='callout margin-top' id='summaryAnswer'></span>";
 
         var arrayChildChoosenOrdenado = ordenAnswer(arrayChildChoosen, arrayChildAnswer.length);
@@ -283,9 +303,18 @@ document.onload
                     var arrayChildrensGrandfather = arrayChildChoosenOrdenado[z].parentElement.parentElement.parentElement.children;
                     var titleQuestion = arrayChildrensGrandfather[0].children;
 
+
+                  Texto="";
+                  TamañoTexto = titleQuestion[0].innerHTML.length;
+                    if(titleQuestion[0].innerHTML.substr(TamañoTexto-7) == "(+info)")
+                      {
+                        Texto = titleQuestion[0].innerHTML.substr(0,TamañoTexto-7);
+                      }
+
+
                     document.getElementById("summaryAnswer").innerHTML =
                         document.getElementById("summaryAnswer").innerHTML +
-                        "<i style='color:#21610B;'>" + arrayChildChoosenOrdenado[z].innerHTML + ": " + titleQuestion[0].innerHTML + "</i><br>";
+                        "<i style='color:#21610B;'>" + arrayChildChoosenOrdenado[z].innerHTML + ": " + Texto + "</i><br>";
                     break;
                 }
             }
