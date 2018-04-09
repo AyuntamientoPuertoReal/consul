@@ -166,7 +166,9 @@ document.onload
       //  "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
 
       parr.innerHTML =
-        "<b>Indique del 1 al " + arrayChildAnswer.length + ", POR ORDEN DE PREFERENCIA, un valor distinto en cada opción." +
+        "<b>Instrucciones para la votación: " +
+        "<br>Ordene del 1 al " + arrayChildAnswer.length + ", POR ORDEN DE PREFERENCIA, un valor distinto en cada opción." +
+        "<br>El valor 1 tendrá la mayor puntuación y el valor " + (arrayChildAnswer.length) + " la menor." +
         "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" OPCIONES PUNTUADAS.<br></b>";
 
     }
@@ -185,7 +187,9 @@ document.onload
       //  "<br>En las propuestas presentadas en VARIAS FASES, la Fase 1 deberá valorarse ANTES que la Fase 2 y así sucesivamente.</b>";
 
       parr.innerHTML =
-        "<b>Indique del 1 al " + arrayChildAnswer.length + ", POR ORDEN DE PREFERENCIA, un valor distinto en cada opción." +
+        "<b>Instrucciones para la votación: " +
+        "<br>Ordene del 1 al " + arrayChildAnswer.length + ", POR ORDEN DE PREFERENCIA, un valor distinto en cada opción." +
+        "<br>El valor 1 tendrá la mayor puntuación y el valor " + (arrayChildAnswer.length) + " la menor." +
         "<br>Solo se aceptarán las votaciones con AL MENOS "+(arrayChildAnswer.length-1)+" OPCIONES PUNTUADAS.<br></b>";
 
       switch (typeMessage)
@@ -217,7 +221,10 @@ document.onload
                           {
                             Texto = titleQuestion[0].innerHTML.substr(0,TamañoTexto-7);
                           }
-
+                          else
+                          {
+                            Texto = titleQuestion[0].innerHTML;
+                          }
 
                           document.getElementById("summaryAnswer").innerHTML =
                                 document.getElementById("summaryAnswer").innerHTML +
@@ -263,7 +270,10 @@ document.onload
                           {
                             Texto = titleQuestion[0].innerHTML.substr(0,TamañoTexto-7);
                           }
-
+                          else
+                          {
+                            Texto = titleQuestion[0].innerHTML;
+                          }
 
                           document.getElementById("summaryAnswer").innerHTML =
                                 document.getElementById("summaryAnswer").innerHTML +
@@ -310,7 +320,10 @@ document.onload
                       {
                         Texto = titleQuestion[0].innerHTML.substr(0,TamañoTexto-7);
                       }
-
+                    else
+                    {
+                      Texto = titleQuestion[0].innerHTML;
+                    }
 
                     document.getElementById("summaryAnswer").innerHTML =
                         document.getElementById("summaryAnswer").innerHTML +
