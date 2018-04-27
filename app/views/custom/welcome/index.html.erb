@@ -5,13 +5,16 @@
 <div class="expanded highlight padding no-margin-top">
   <div class="row">
     <div class="small-12 medium-6 column">
-      <h1><%= t("layouts.header.open_city_title") %></h1>
-      <p>
-
+      <!--<h1><%= t("layouts.header.open_city_title") %></h1>-->
+      <h1 style="color:#943f8d"><%= t("layouts.header.open_city_title") %></h1>
+      <!--<p>
+      <h3 style="color:#943f8d">PRÁCTICAS ÉTICAS</h3>-->
+      <h3 style="color:#943f8d">DE LOS REPRESENTANTES PÚBLICOS LOCALES</h3>
+      <h2 style="color:#cc313f">PRIMER SONDEO</h2>
         <%= t("layouts.header.open_city_slogan_html") %>&nbsp;<br>
         <!-- <span class="parpadea text"><strong>¡VOTACIONES ABIERTAS. PULSA EL SIGUIENTE BOTÓN!</strong></span> -->
         <!--<%= link_to t("layouts.header.more_info"), more_info_path %>-->
-      </p>
+      <!--</p>-->
       <div class="small-12 medium-12">
         <!--
         <div class="small-12 medium-5" style="float: left;">
@@ -23,11 +26,12 @@
         -->
 
         <div class="small-12 medium-12" style="float: left;">
-          <%= image_tag(image_path_for("Banner.jpg"), size: "788x285", alt:"") %>
           <!--
-          <p></p>
-          <%= link_to "Accede a la Votación", "/VotacionDiadelaVilla", class: "button see-more expanded" %>
+          <%= image_tag(image_path_for("Banner.jpg"), size: "788x285", alt:"") %>
           -->
+          <p></p>
+          <%= link_to "PROCESO PARTICIPATIVO ABIERTO DEL  1  AL  31  DE  MAYO", "", class: "button see-more expanded" %>
+
         </div>
       </div>
     </div>
