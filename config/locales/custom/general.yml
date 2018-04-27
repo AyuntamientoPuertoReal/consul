@@ -198,7 +198,7 @@ es:
       administration_menu: Admin
       administration: Administrar
       available_locales: Idiomas disponibles
-      collaborative_legislation: Procesos
+      collaborative_legislation: Procesos participativos
       debates: Debates
       external_link_blog: Blog
       external_link_opendata: Datos abiertos
@@ -220,8 +220,8 @@ es:
         other: Tienes %{count} notificaciones nuevas
       no_notifications: No tienes notificaciones nuevas
       open: abierto
-      open_city_slogan_html: Realizado el recuento de los votos ciudadanos para otorgar los títulos de Hijo/a Adoptivo/a, Hijo/a Predilecto/a y Medalla de la Villa. Tras analizar los resultados se ha decidido homenajear a los/as dos primeros/as candidatos/as de cada categoría, por la escasa diferencia de votos entre el primer y segundo clasificado en todas ellas.
-      open_city_title: Votación Día de la Villa
+      open_city_slogan_html: Con la intención de fomentar el conocimiento sobre la institución municipal, estableciendo medidas y procedimientos adecuados para garantizar el efectivo cumplimiento de la participación ciudadana, y haciendo uso de la posibilidad que ofrece el Reglamento de Participación Ciudadana actualmente vigente (Art.20), se plantea este sondeo de opinión para recabar el parecer de la ciudadanía sobre el establecimiento de unas normas de prácticas éticas y conducta de los representantes públicos locales.
+      open_city_title: PRÁCTICAS ÉTICAS
       open_gov: Decide Puerto Real
       proposals: Propuestas
       poll_questions: Votaciones
