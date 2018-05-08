@@ -398,7 +398,7 @@ es:
       supports_necessary: "%{number} apoyos necesarios"
       total_percent: 100%
       archived: "Esta propuesta ha sido archivada y ya no puede recoger apoyos."
-      successful: "Esta propuesta ha alcanzado los apoyos necesarios y pasará a la %{voting}."
+      successful: "Esta propuesta ha alcanzado los apoyos necesarios y ha sido enviada directamente a la Comisión de Viabilidad."
       voting: "próxima votación"
     show:
       author_deleted: Usuario eliminado
