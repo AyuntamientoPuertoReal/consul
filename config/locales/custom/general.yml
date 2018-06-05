@@ -220,12 +220,12 @@ es:
         other: Tienes %{count} notificaciones nuevas
       no_notifications: No tienes notificaciones nuevas
       open: abierto
-      open_city_slogan_html: Con la intención de fomentar el conocimiento sobre la institución municipal, estableciendo medidas y procedimientos adecuados para garantizar el efectivo cumplimiento de la participación ciudadana, y haciendo uso de la posibilidad que ofrece el Reglamento de Participación Ciudadana actualmente vigente (Art.20), se plantea este sondeo de opinión para recabar el parecer de la ciudadanía sobre el establecimiento de unas normas de prácticas éticas y conducta de los representantes públicos locales.
-      open_city_title: PRÁCTICAS ÉTICAS
+      open_city_slogan_html: Decide Puerto Real es una herramienta de participación online que se pone a disposición de las vecinas y los vecinos de Puerto Real, que complementa el trabajo presencial de los barrios. Con ella se quiere fomentar un espacio de construcción colectiva de nuestra ciudad.
+      open_city_title: Construimos desde abajo
       open_gov: Decide Puerto Real
       proposals: Propuestas
       poll_questions: Votaciones
-      see_all: Ver propuestas
+      see_all: Accede a las Propuestas ciudadanas
       budgets: Presupuestos participativos
       spending_proposals: "Propuestas de inversión"
     admin:

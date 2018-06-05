@@ -5,21 +5,18 @@
 <div class="expanded highlight padding no-margin-top">
   <div class="row">
     <div class="small-12 medium-6 column">
-      <!--<h1><%= t("layouts.header.open_city_title") %></h1>-->
-      <h1 style="color:#943f8d"><%= t("layouts.header.open_city_title") %></h1>
-      <!--<p>
-      <h3 style="color:#943f8d">PRÁCTICAS ÉTICAS</h3>-->
-      <h3 style="color:#943f8d">DE LOS REPRESENTANTES PÚBLICOS LOCALES</h3>
-      <h2 style="color:#cc313f">PRIMER SONDEO</h2>
-        <%= t("layouts.header.open_city_slogan_html") %>&nbsp;<br>
+      <h1><%= t("layouts.header.open_city_title") %></h1>
+
+      <%= t("layouts.header.open_city_slogan_html") %>&nbsp;<br>
         <!-- <span class="parpadea text"><strong>¡VOTACIONES ABIERTAS. PULSA EL SIGUIENTE BOTÓN!</strong></span> -->
         <!--<%= link_to t("layouts.header.more_info"), more_info_path %>-->
-      <!--</p>-->
+        <!--</p>-->
       <div class="small-12 medium-12">
-        <!--
-        <div class="small-12 medium-5" style="float: left;">
+
+        <div class="small-12 medium-8" style="float: left;">
           <%= link_to t("layouts.header.see_all"), proposals_path, class: "button see-more expanded" %>
         </div>
+        <!--
         <div class="small-12 medium-5" style="float: right;">
           <%= link_to "Resultados Priorización", "PriorizacionOct17", class: "button see-more expanded" %>
         </div>
@@ -27,27 +24,7 @@
 
         <p></p>
 
-        <div class="small-12 medium-4" style="float: left;padding-right: 5px">
-          <%= link_to "Carta presentación", "PracticasEticas-CartaPresentacion", class: "button see-more expanded" %>
-        </div>
-        <div class="small-12 medium-4" style="float: left;padding-right: 5px">
-          <%= link_to "Proceso", "PracticasEticas-DescProceso", class: "button see-more expanded" %>
-        </div>
-        <div class="small-12 medium-4" style="float: left;">
-          <%= link_to "Normativa vigente", "PracticasEticas-NormativaVigente", class: "button see-more expanded" %>
-        </div>
 
-        <div class="small-12 medium-12" style="float: left;">
-          <!--
-          <%= image_tag(image_path_for("Banner.jpg"), size: "788x285", alt:"") %>
-          -->
-
-          <span class="parpadea text" >Proceso Participativo abierto ¡PARTICIPA!</span>
-          <%= link_to "Del 1 al 31 de mayo. Pulsa aquí para participar", "legislation/processes/1", class: "button see-more expanded" %>
-          <!--
-          <%= link_to "Proceso Participativo del 1 al 31 de mayo. ¡PARTICIPA!", "legislation/processes/1", class: "button see-more expanded" %>
-          -->
-        </div>
       </div>
     </div>
 
@@ -56,6 +33,7 @@
     </div>
   </div>
   <p></p>
+
   <div class="row" style="background-color:#fdeea9">
     <div class="small-12 medium-12 column">
       <h2 style="color:#cc313f">NUEVO PROCESO PARTICIPATIVO</h2>
@@ -63,7 +41,7 @@
       <h3 style="color:#943f8d">PLAN MUNICIPAL DE VIVIENDA Y SUELO</h3>
       Con el objetivo de realizar el Plan Municipal de Vivienda y Suelo de Puerto Real y plasmar en el análisis y diagnóstico la realidad de las ciudadanas y ciudadanos del municipio, se presenta la siguiente encuesta.
       <br>El interés de la misma radica en que la información obtenida será contrastada con los datos estadísticos y de gran valor para la información del modelo de ciudad y las políticas públicas en materia de vivienda que se desarrollarán en el municipio en los próximos años.
-      <br><h4 style="color:#943f8d" >Proceso abierto desde el 17 de mayo al 17 de junio.</h4>
+      <br><h4 class="parpadea text" style="color:#cc313f" >Proceso abierto hasta el 17 de junio.</h4>
       <%= link_to "¡PARTICIPA! Pulsa aquí para acceder a la encuesta.", "legislation/processes/2", class: "button see-more expanded" %>
     </div>
   </div>
@@ -76,8 +54,8 @@
       <!--<div class="small-12 medium-3 column">-->
         <!--<h2><%= t("welcome.debates.title") %></h2>-->
         <!--<p><%= t("welcome.debates.description") %></p>-->
-
       <!--</div>-->
+
       <div class="small-12 medium-4 column">
         <h2><%= link_to t("welcome.proposal.title"),proposals_path %></h2>
         <p><%= t("welcome.proposal.description") %></p>
