@@ -28,7 +28,9 @@
       </div>
     </div>
   </div>
+  <!--
   <div id="myAlertPolls"></div>
+  -->
   <div class="row margin-top">
     <div class="small-12 medium-9 column" id="fatherOfAllAnswer">
       <% if @poll.voted_in_booth?(current_user) %>
@@ -50,8 +52,9 @@
       } %>
     </aside>
   </div>
+  <!--
   <div id="myAlertPolls2"></div>
-
+  -->
   <!--SCRIPT DE AVISOS DE VOTACIONES-->
   <% unless !can?(:answer, @poll) %>
       <% if !current_user.nil? %>
