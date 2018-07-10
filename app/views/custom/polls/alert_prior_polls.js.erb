@@ -6,16 +6,29 @@ document.onload
     //Button confirmación falso, solo redirecciona
     var linkButtonConfirmation = document.createElement("a");
     linkButtonConfirmation.href = "<%= root_url %>";
-    linkButtonConfirmation.innerHTML = "Confirmar votación";
+    linkButtonConfirmation.innerHTML = "Aceptar";
 
     var linkButtonConfirmation2 = document.createElement("a");
     linkButtonConfirmation2.href = "<%= root_url %>";
-    linkButtonConfirmation2.innerHTML = "Confirmar votación";
+    linkButtonConfirmation2.innerHTML = "Aceptar";
 
     myAlert.appendChild(linkButtonConfirmation);
-    myAlert2.appendChild(linkButtonConfirmation2);
+//    myAlert2.appendChild(linkButtonConfirmation2);
 
-    // <p> contenedor del texto
+  var parrX = document.createElement("p");
+  parrX.id = "parrMyAlert";
+  parrX.className = "large-10 medium-10 small-12";
+  myAlert.appendChild(parrX);
+  parrX.innerHTML =
+    "<b>Instrucciones para la votación:</b><br>" +
+    " - Para votar, solo tiene que marcar una de las opciones. Su voto quedará automáticamente registrado.<br>" +
+    " - Puede comprobar su voto. Observe que su opción elegida tendrá un aspa verde.<br>" +
+    " - Si cambia de opinión, puede cambiar su elección hasta el último día de votaciones. Su voto quedará actualizado automáticamente.<br>" +
+    " - Recuerde. Solo se contabilizará la opción que tenga marcada al finalizar las votaciones.";
+
+
+
+  // <p> contenedor del texto
     var parr = document.createElement("p");
     parr.id = "parrMyAlert";
     parr.className = "large-10 medium-10 small-12";
@@ -23,8 +36,8 @@ document.onload
     parr2.id = "parrMyAlert2";
     parr2.className = "large-10 medium-10 small-12";
 
-    myAlert.appendChild(parr);
-    myAlert2.appendChild(parr2);
+//    myAlert.appendChild(parr);
+//    myAlert2.appendChild(parr2);
 
     var arrayChildChoosen = new Array();                 // Array con los elementos activos al votar
     var arrayChildAnswer;                                // Array con los elementos de la propuesta
