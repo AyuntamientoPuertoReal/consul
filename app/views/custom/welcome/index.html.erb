@@ -33,9 +33,9 @@
             La Concejalía de Participación Ciudadana abre votación de las propuestas presentadas por las vecinas y los vecinos para dar nombre a la nueva Plaza de la calle Fermín Salvochea de la barriada Río San Pedro.
 
             <br><h4 class="parpadea text" style="color:#cc313f" >Proceso abierto del 13 al 29 de julio.</h4>
-            <!--
-      <%= link_to "¡PARTICIPA! Pulsa aquí para acceder...", "legislation/processes/3", class: "button see-more expanded" %>
-      -->
+
+            <%= link_to "¡PARTICIPA! Pulsa aquí para acceder a la votación.", "polls/6", class: "button see-more expanded" %>
+      
           </div>
         </div>
         <p></p>
@@ -49,16 +49,7 @@
   </div>
   <p></p>
 
-  <div class="row" style="background-color:#fdeea9">
-    <div class="small-12 medium-12 column">
-      <h2 style="color:#cc313f">VOTACIÓN</h2>
-      <h3 style="color:#943f8d">ELECCIÓN FESTIVO LOCAL 2019</h3>
-      Queremos -como se viene haciendo con asuntos de distinta índole-, escuchar lo que la ciudadanía puertorrealeña opina, y es por ello por lo que abrimos esta votación cuyo resultado será llevado al Pleno del Ayuntamiento.
-      <br><h4 class="parpadea text" style="color:#cc313f" >Votación abierta hasta el 12 de julio.</h4>
-      <%= link_to "¡PARTICIPA! Pulsa aquí para acceder a la votación.", "VotacionFestivoLocal2019", class: "button see-more expanded" %>
-    </div>
-  </div>
-  
+
 </div>
 
 <% cache [locale_and_user_status, @featured_debates, @featured_proposals, 'featured'] do %>
