@@ -10,21 +10,28 @@
       -->
       <h1><%= t("layouts.header.open_city_title") %></h1>
 
+      <!--
       <%= t("layouts.header.open_city_slogan_html") %>&nbsp;<br>
-
+      -->
+      <%= image_tag(image_path_for("BannerDiadelaVilla2019.jpg"), size: "850x283", alt:"") %>
+      <p></p>
+      <p></p>
+      <div class="small-12 medium-6" style="float: left;padding-right: 5px">
+        <%= link_to "Información", "DiadelaVilla2019-Informacion", class: "button see-more expanded" %>
+      </div>
+      <div class="small-12 medium-6" style="float: left;padding-right: 5px">
+        <%= link_to "Participa en la VOTACIÓN", "polls", class: "button see-more expanded" %>
+      </div>
         <!-- <span class="parpadea text"><strong>¡VOTACIONES ABIERTAS. PULSA EL SIGUIENTE BOTÓN!</strong></span> -->
         <!--<%= link_to t("layouts.header.more_info"), more_info_path %>-->
         <!--</p>-->
       <div class="small-12 medium-12">
         <p></p>
         <div class="small-12 medium-8" style="float: left;">
-          <%= link_to t("layouts.header.see_all"), proposals_path, class: "button see-more expanded" %>
-        </div>
         <!--
-        <div class="small-12 medium-5" style="float: right;">
-          <%= link_to "Resultados Priorización", "PriorizacionOct17", class: "button see-more expanded" %>
-        </div>
+          <%= link_to t("layouts.header.see_all"), proposals_path, class: "button see-more expanded" %>
         -->
+        </div>
 
       </div>
     </div>
