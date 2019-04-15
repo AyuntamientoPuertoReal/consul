@@ -10,6 +10,7 @@
   <div class="small-12 column">
     <%= render 'shared/filter_subnav', i18n_namespace: "polls.index" %>
 
+<!--
     <div id="section_help" class="margin" data-magellan-target="section_help">
       <h3 id="section1" data-magellan-target="polls">Cómo votar</h3>
       El sistema de Votación es de VOTO PONDERADO.
@@ -20,7 +21,7 @@
         <li>Solo serán válidas las votaciones que puntúen un valor distinto para cada candidatura, pudiendo dejar sin valorar solo una de ellas.</li>
       </ul>
     </div>
-
+-->
     <% polls_by_geozone_restriction = @polls.group_by(&:geozone_restricted) %>
 
     <% if polls_by_geozone_restriction[false].present? %>
@@ -39,6 +40,7 @@
 
     <%= paginate @polls %>
 
+<!--
     <div id="section_help" class="margin" data-magellan-target="section_help">
       <h3 id="section1" data-magellan-target="polls">Cómo votar</h3>
       El sistema de Votación es de VOTO PONDERADO.
@@ -49,7 +51,7 @@
         <li>Solo serán válidas las votaciones que puntúen un valor distinto para cada candidatura, pudiendo dejar sin valorar solo una de ellas.</li>
       </ul>
     </div>
-
+-->
     <div id="section_help2" class="margin" data-magellan-target="section_help">
       <h3 id="section1" data-magellan-target="polls"><%= t("pages.more_info.polls.title") %></h3>
       <!--<p><%= t("pages.more_info.polls.description") %></p>-->
