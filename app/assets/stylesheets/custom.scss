@@ -95,3 +95,12 @@ a {
     color: #fff;
   }
 }
+
+.auth-image {
+  background-position-x: 83%;
+  @media screen and (max-width: 639px) {
+    background-position-x: -53%;
+    background-size: 100%;
+    background-position-y: 17%;
+  }
+}
