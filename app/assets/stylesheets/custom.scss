@@ -82,7 +82,16 @@ a {
   color: $brand;
 }
 
-dark-heading {
+.dark-heading {
   background: $dark;
   color: #fff;
+  a.back {
+    color: #fff;
+  }
+  a.back:hover {
+    color: #fff;
+  }
+  .icon-angle-left {
+    color: #fff;
+  }
 }
