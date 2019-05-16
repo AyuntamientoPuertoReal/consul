@@ -628,8 +628,9 @@ es:
         title: Votaciones
         help: Ayuda sobre las votaciones
       section_footer:
-        title: Ayuda sobre las votaciones prueba
-        description: Las votaciones ciudadanas son un mecanismo de participación por el que la ciudadanía con derecho a voto puede tomar decisiones de forma directa.
+        title: Quién pueden votar
+        description: Para participar en las votaciones tiene que estar registrado en Decide Puerto Real y verificar tu cuenta.
+        description2: Pueden votar todas las personas empadronadas en la ciudad mayores de 16 años.
       no_polls: "No hay votaciones abiertas."
     show:
       already_voted_in_booth: "Ya has participado en esta votación en urnas presenciales, no puedes volver a participar."
