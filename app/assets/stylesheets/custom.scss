@@ -3,3 +3,104 @@
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
+.button {
+  color:#ffffff;
+  background-color: $dark;
+  &:hover {
+    text-decoration: none !important;
+    background-color: $brand;
+  }
+
+  &.warning,
+  &.warning:hover{
+    color:#000;
+  }
+}
+
+a {
+  color: $dark;
+
+  &:hover,
+  &:active {
+    color: $brand;
+    text-decoration: underline;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $link-hover;
+    }
+  }
+
+  &:focus {
+    outline: 0px;
+  }
+}
+
+.top-links a {
+  &:hover {
+    color: #fff;
+  }
+}
+
+.menu.simple.clear {
+  a:hover {
+    color: $brand;
+  }
+}
+.no-bullet.submenu a {
+
+  @include breakpoint(medium) {
+    background: #fff;
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    color: $brand;
+  }
+}
+.subnavigation a {
+  @include breakpoint(medium) {
+    background: #fff;
+    padding-bottom: 0;
+  }
+  &:hover {
+    color: $brand;
+  }
+}
+
+.button.hollow {
+  border: 1px solid $dark;
+  color: $dark;
+}
+
+.button.hollow:hover {
+  border-color: $brand;
+  color: $brand;
+}
+
+.dark-heading {
+  background: $dark;
+  color: #fff;
+  a.back {
+    color: #fff;
+  }
+  a.back:hover {
+    color: #fff;
+  }
+  .icon-angle-left {
+    color: #fff;
+  }
+}
+
+.auth-image {
+  background-position-x: 83%;
+  @media screen and (max-width: 639px) {
+    background-position-x: -53%;
+    background-size: 100%;
+    background-position-y: 17%;
+  }
+}
