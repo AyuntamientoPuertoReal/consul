@@ -230,6 +230,7 @@ es:
       privacy: Política de privacidad
       transparency_text: Obtén cualquier información sobre la ciudad.
       transparency_title: Transparencia
+
     header:
       administration_menu: Admin
       administration: Administración
@@ -408,8 +409,9 @@ es:
         title: Propuestas
         help: Ayuda sobre las propuestas
       section_footer:
-        title: Ayuda sobre las propuestas
-        description: Las propuestas ciudadanas son una oportunidad para que los vecinos y colectivos decidan directamente cómo quieren que sea su ciudad, después de conseguir los apoyos suficientes y de someterse a votación ciudadana.
+        title: Propuestas
+        description: Propón lo que quieres que el Ayuntamiento lleve a cabo y apoya propuestas de otras personas.
+        description2: Para crear una propuesta hay que registrarse en Decide Puerto Real además para apoyarlas debes verificar tu cuenta.
     new:
       form:
         submit_button: Crear propuesta
@@ -621,7 +623,7 @@ es:
       participate_button: "Participar en esta votación"
       participate_button_expired: "Votación terminada"
       no_geozone_restricted: "Toda la ciudad"
-      geozone_restricted: "Distritos"
+      geozone_restricted: "Zonas"
       geozone_info: "Pueden participar las personas empadronadas en: "
       already_answer: "Ya has participado en esta votación"
       not_logged_in: "Necesitas iniciar sesión o registrarte para participar"
@@ -632,8 +634,9 @@ es:
         title: Votaciones
         help: Ayuda sobre las votaciones
       section_footer:
-        title: Ayuda sobre las votaciones
-        description: Las votaciones ciudadanas son un mecanismo de participación por el que la ciudadanía con derecho a voto puede tomar decisiones de forma directa.
+        title: Quién puede votar
+        description: Para participar en las votaciones tiene que estar registrado en Decide Puerto Real y verificar tu cuenta.
+        description2: Pueden votar todas las personas empadronadas en la ciudad mayores de 16 años.
       no_polls: "No hay votaciones abiertas."
     show:
       already_voted_in_booth: "Ya has participado en esta votación en urnas presenciales, no puedes volver a participar."
