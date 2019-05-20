@@ -1,0 +1,22 @@
+<% if header.present? %>
+  <div class="jumbo highlight">
+    <div class="row">
+      <div class="small-12 medium-6 column <%= "medium-9 small-centered text-center" unless header.image.present? %>">
+        <span><%= header.label %></span>
+        <h1><%= t("layouts.header.open_city_title") %></h1>
+        <p><%= t("layouts.header.open_city_slogan_html") %></p>
+      </div>
+
+      <% if header.image.present? %>
+        <div class="small-12 medium-6 column text-center">
+          <%= image_tag(header.image_url(:large),
+                        class: "margin",
+                        alt: header.image.title,
+                        width: "330px",
+                        height: "240px" )  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="background-header"></div>
+<% end %>

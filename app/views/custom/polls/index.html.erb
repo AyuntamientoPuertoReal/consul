@@ -60,8 +60,15 @@
       <p class="lead">
         <strong><%= t("polls.index.section_footer.title") %></strong>
       </p>
-      <p><%= t("polls.index.section_footer.description") %></p>
+
+      <ul style="list-style-type:disc;">
+        <li><p><%= t("polls.index.section_footer.description") %></p></li>
+        <li><p><%= t("polls.index.section_footer.description2") %></p></li>
+      </ul>
+
       <%= render_custom_partial "footer" %>
+
     </div>
+
   </div>
 </div>
