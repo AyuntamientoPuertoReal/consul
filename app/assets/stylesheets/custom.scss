@@ -2,7 +2,7 @@
 // Read more on documentation:
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
-//
+//Cambio de color en los botones de Consul
 .button {
   color:#ffffff;
   background-color: $dark;
@@ -16,6 +16,8 @@
     color:#000;
   }
 }
+
+//Estilos de los enlaces
 
 a {
   color: $dark;
@@ -46,6 +48,7 @@ a {
   }
 }
 
+//Estilos de los menus
 .menu.simple.clear {
   a:hover {
     color: $brand;
@@ -72,6 +75,8 @@ a {
   }
 }
 
+//Botones huecos
+
 .button.hollow {
   border: 1px solid $dark;
   color: $dark;
@@ -82,6 +87,7 @@ a {
   color: $brand;
 }
 
+//Banner votaciones
 .dark-heading {
   background: $dark;
   color: #fff;
@@ -96,6 +102,8 @@ a {
   }
 }
 
+//Imagen página de Login
+
 .auth-image {
   background-position-x: 83%;
   @media screen and (max-width: 639px) {
@@ -105,7 +113,25 @@ a {
   }
 }
 
+//Deshabilitar botón de votaciones
+
 .disabledButton {
   opacity: 0.25;
   pointer-events: none;
+}
+
+//Colores de la página de administación
+
+.admin-sidebar{
+  background: $dark;
+  li.is-active a{
+    background: $brand;
+  }
+  li a:hover{
+    background: $brand;
+  }
+
+  li ul {
+    border-left: 1px solid $brand;
+  }
 }
