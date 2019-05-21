@@ -46,6 +46,8 @@ Rails.application.routes.draw do
   get "help",             to: "pages#show", id: "help/index",             as: "help"
   get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
   get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
+  get 'help/proposals',   to: 'pages#show', id: 'help/_proposals',        as: 'help/proposals'
+  get 'help/polls',       to: 'pages#show', id: 'help/_polls',            as: 'help/polls'
 
   # Static pages
   resources :pages, path: "/", only: [:show]
