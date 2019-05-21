@@ -221,13 +221,16 @@ es:
       consul: aplicación CONSUL
       consul_url: https://github.com/consul/consul
       contact_us: Para asistencia técnica entra en
-      copyright: CONSUL, %{year}
-      description: Este portal usa la %{consul} que es %{open_source}.
+      copyright: Ayuntamiento de Puerto Real, %{year}
+      description: Es una adaptación de la plataforma %{open_source} %{consul} desarrollada por el Ayuntamiento de Madrid y adaptada por el Ayuntamiento de Puerto Real.<br/>
       open_source: software de código abierto
       open_source_url: http://www.gnu.org/licenses/agpl-3.0.html
       participation_text: Decide cómo debe ser la ciudad que quieres.
       participation_title: Participación
       privacy: Política de privacidad
+      transparency_text: Obtén cualquier información sobre la ciudad.
+      transparency_title: Transparencia
+
     header:
       administration_menu: Admin
       administration: Administración
@@ -240,11 +243,13 @@ es:
       moderation: Moderar
       valuation: Evaluación
       officing: Presidentes de mesa
+      open_city_slogan_html: Decide Puerto Real es una herramienta de participación online que se pone a disposición de los vecinos y vecinas de Puerto Real, que complementa el trabajo presencial de los barrios. Con ella se quiere fomentar un espacio de construcción colectiva de nuestra ciudad.
+      open_city_title: Construimos desde abajo
       help: Ayuda
       my_account_link: Mi cuenta
       my_activity_link: Mi actividad
       open: abierto
-      open_gov: Gobierno %{open}
+      open_gov: Decide Puerto Real
       proposals: Propuestas
       poll_questions: Votaciones
       budgets: Presupuestos participativos
@@ -629,7 +634,7 @@ es:
         title: Votaciones
         help: Ayuda sobre las votaciones
       section_footer:
-        title: Quién pueden votar
+        title: Quién puede votar
         description: Para participar en las votaciones tiene que estar registrado en Decide Puerto Real y verificar tu cuenta.
         description2: Pueden votar todas las personas empadronadas en la ciudad mayores de 16 años.
       no_polls: "No hay votaciones abiertas."
