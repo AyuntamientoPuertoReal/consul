@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 20190411090023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "unaccent"
   enable_extension "pg_trgm"
+  enable_extension "unaccent"
 
   create_table "active_poll_translations", force: :cascade do |t|
     t.integer  "active_poll_id", null: false
@@ -865,8 +865,8 @@ ActiveRecord::Schema.define(version: 20190411090023) do
   end
 
   create_table "milestones", force: :cascade do |t|
-    t.integer  "milestoneable_id"
     t.string   "milestoneable_type"
+    t.integer  "milestoneable_id"
     t.string   "title",              limit: 80
     t.text     "description"
     t.datetime "publication_date"
@@ -1150,8 +1150,8 @@ ActiveRecord::Schema.define(version: 20190411090023) do
   create_table "progress_bars", force: :cascade do |t|
     t.integer  "kind"
     t.integer  "percentage"
-    t.integer  "progressable_id"
     t.string   "progressable_type"
+    t.integer  "progressable_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
@@ -1219,10 +1219,10 @@ ActiveRecord::Schema.define(version: 20190411090023) do
   end
 
   create_table "related_contents", force: :cascade do |t|
-    t.integer  "parent_relationable_id"
     t.string   "parent_relationable_type"
-    t.integer  "child_relationable_id"
+    t.integer  "parent_relationable_id"
     t.string   "child_relationable_type"
+    t.integer  "child_relationable_id"
     t.integer  "related_content_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -1436,8 +1436,8 @@ ActiveRecord::Schema.define(version: 20190411090023) do
     t.boolean  "created_from_signature",                    default: false
     t.integer  "failed_email_digests_count",                default: 0
     t.text     "former_users_data_log",                     default: ""
-    t.integer  "balloted_heading_id"
     t.boolean  "public_interests",                          default: false
+    t.integer  "balloted_heading_id"
     t.boolean  "recommended_debates",                       default: true
     t.boolean  "recommended_proposals",                     default: true
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
