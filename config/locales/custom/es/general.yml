@@ -763,8 +763,8 @@ es:
         see_all: "Ver todas"
     tags_cloud:
       tags: Tendencias
-      districts: "Distritos"
-      districts_list: "Listado de distritos"
+      districts: "Zonas"
+      districts_list: "Listado de zonas"
       categories: "Categorías"
     target_blank_html: " (se abre en ventana nueva)"
     you_are_in: "Estás en"
