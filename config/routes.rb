@@ -46,16 +46,10 @@ Rails.application.routes.draw do
   get "help",             to: "pages#show", id: "help/index",             as: "help"
   get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
   get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
+  # Custom info pages
   get 'help/proposals',   to: 'pages#show', id: 'help/_proposals',        as: 'help/proposals'
   get 'help/polls',       to: 'pages#show', id: 'help/_polls',            as: 'help/polls'
 
   # Static pages
   resources :pages, path: "/", only: [:show]
-
-  # Custom More info
-  get 'more-information/debates',             to: 'pages#show', id: 'more_info/_debates',             as: 'more_info/debates'
-  get 'more-information/budgets',             to: 'pages#show', id: 'more_info/_budgets',             as: 'more_info/_budgets'
-  get 'more-information/proposals',           to: 'pages#show', id: 'more_info/_proposals',           as: 'more_info/_proposals'
-  get 'more-information/polls',               to: 'pages#show', id: 'more_info/_polls',               as: 'more_info/_polls'
-  get 'more-information/others',              to: 'pages#show', id: 'more_info/_other',               as: 'more_info/_other'
 end
