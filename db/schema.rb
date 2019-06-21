@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 20190607160900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "unaccent"
   enable_extension "pg_trgm"
+  enable_extension "unaccent"
 
   create_table "active_poll_translations", force: :cascade do |t|
     t.integer  "active_poll_id", null: false
@@ -1464,8 +1464,8 @@ ActiveRecord::Schema.define(version: 20190607160900) do
     t.boolean  "created_from_signature",                    default: false
     t.integer  "failed_email_digests_count",                default: 0
     t.text     "former_users_data_log",                     default: ""
-    t.integer  "balloted_heading_id"
     t.boolean  "public_interests",                          default: false
+    t.integer  "balloted_heading_id"
     t.boolean  "recommended_debates",                       default: true
     t.boolean  "recommended_proposals",                     default: true
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

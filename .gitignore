@@ -38,3 +38,7 @@
 public/sitemap.xml
 public/system/
 /public/ckeditor_assets/
+
+# Unicorn server files
+/shared
+/config/unicorn.rb
