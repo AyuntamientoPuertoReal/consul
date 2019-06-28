@@ -3,3 +3,137 @@
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
+
+//Cambio de color en los botones de Consul
+.button {
+  color:#ffffff;
+  background-color: $dark;
+  &:hover {
+    text-decoration: none !important;
+    background-color: $brand;
+  }
+
+  &.warning,
+  &.warning:hover{
+    color:#000;
+  }
+}
+
+//Estilos de los enlaces
+
+a {
+  color: $dark;
+
+  &:hover,
+  &:active {
+    color: $brand;
+    text-decoration: underline;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $link-hover;
+    }
+  }
+
+  &:focus {
+    outline: 0px;
+  }
+}
+
+.top-links a {
+  &:hover {
+    color: #fff;
+  }
+}
+
+//Estilos de los menus
+.menu.simple.clear {
+  a:hover {
+    color: $brand;
+  }
+}
+.no-bullet.submenu a {
+
+  @include breakpoint(medium) {
+    background: #fff;
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    color: $brand;
+  }
+}
+.subnavigation a {
+  @include breakpoint(medium) {
+    background: #fff;
+    padding-bottom: 0;
+  }
+  &:hover {
+    color: $brand;
+  }
+}
+
+//Botones huecos
+
+.button.hollow {
+  border: 1px solid $dark;
+  color: $dark;
+}
+
+.button.hollow:hover {
+  border-color: $brand;
+  color: $brand;
+}
+
+//Banner votaciones
+.dark-heading {
+  background: $dark;
+  color: #fff;
+  a.back {
+    color: #fff;
+  }
+  a.back:hover {
+    color: #fff;
+  }
+  .icon-angle-left {
+    color: #fff;
+  }
+}
+
+//Imagen página de Login
+
+.auth-image {
+  background-position-x: 83%;
+  @media screen and (max-width: 639px) {
+    background-position-x: -53%;
+    background-size: 100%;
+    background-position-y: 17%;
+  }
+}
+
+//Colores de la página de administación
+
+.admin-sidebar{
+  background: $dark;
+  li.is-active a{
+    background: $brand;
+  }
+  li a:hover{
+    background: $brand;
+  }
+
+  li ul {
+    border-left: 1px solid $brand;
+  }
+}
+
+//Deshabilitar botón de votaciones
+
+.disabledButton {
+  opacity: 0.25;
+  pointer-events: none;
+}
