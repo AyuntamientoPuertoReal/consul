@@ -40,6 +40,8 @@ es:
         link: "votaciones ciudadanas"
         feature_1: "Para participar en las votaciones tienes que %{link} y verificar tu cuenta."
         feature_1_link: "registrarte en %{org_name}"
+        feature_2: "Pueden votar todas las personas empadronadas en la ciudad mayores de 16 años."
+        feature_3: "Los resultados de todas las votaciones serán vinculantes para el gobierno."
       processes:
         title: "Legislación colaborativa"
         description: "En la sección de %{link} la ciudadanía participa en la elaboración y modificación de normativa que afecta a la ciudad y puede dar su opinión sobre las políticas municipales en debates previos."
