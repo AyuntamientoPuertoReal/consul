@@ -224,7 +224,7 @@ es:
     footer:
       accessibility: Accesibilidad
       conditions: Condiciones de uso
-      consul: aplicación CONSUL
+      consul: CONSUL
       consul_url: https://github.com/consul/consul
       contact_us: Para asistencia técnica envía un correo electrónico a
       copyright: Ayuntamiento de Puerto Real, %{year}
@@ -248,8 +248,6 @@ es:
       moderation: Moderar
       valuation: Evaluación
       officing: Presidentes de mesa
-      open_city_slogan_html: Decide Puerto Real es una herramienta de participación online que se pone a disposición de los vecinos y vecinas de Puerto Real, que complementa el trabajo presencial de los barrios. Con ella se quiere fomentar un espacio de construcción colectiva de nuestra ciudad.
-      open_city_title: Construimos desde abajo
       help: Ayuda
       my_account_link: Mi cuenta
       my_activity_link: Mi contenido
@@ -264,8 +262,22 @@ es:
           other: Tienes %{count} notificaciones nuevas
         notifications: Notificaciones
         no_notifications: "No tienes notificaciones nuevas"
+        open_city_slogan_html: Decide Puerto Real es una herramienta de participación online que se pone a disposición de los vecinos y vecinas de Puerto Real, que complementa el trabajo presencial de los barrios. Con ella se quiere fomentar un espacio de construcción colectiva de nuestra ciudad.
+        open_city_title: Construimos desde abajo
     admin:
       watch_form_message: "Has realizado cambios que no han sido guardados. ¿Seguro que quieres abandonar la página?"
+    debates:
+      description: Encontrarnos, debatir y compartir lo que nos parece importante en nuestra ciudad.
+      title: Debates
+    decide:
+      description: La ciudadanía decide si acepta o rechaza las propuestas más apoyadas.
+      title: Decides
+    do:
+      description: Si la propuesta es aceptada mayoritariamente, el Ayuntamiento la asume como propia y se hace.
+      title: Se hace
+    proposal:
+      description: Espacio abierto para propuestas ciudadanas sobre el tipo de ciudad en el que queremos vivir.
+      title: Propones
   notifications:
     index:
       empty_notifications: No tienes notificaciones nuevas.
@@ -416,6 +428,7 @@ es:
       section_footer:
         title: Ayuda sobre las propuestas
         description: Las propuestas ciudadanas son una oportunidad para que los vecinos y colectivos decidan directamente cómo quieren que sea su ciudad, después de conseguir los apoyos suficientes y de someterse a votación ciudadana.
+        description_proposals1: Propón lo que quieres que el Ayuntamiento lleve a cabo y apoya propuestas de otras personas.
     new:
       form:
         submit_button: Crear propuesta
@@ -635,7 +648,7 @@ es:
       participate_button: "Participar en esta votación"
       participate_button_expired: "Votación terminada"
       no_geozone_restricted: "Toda la ciudad"
-      geozone_restricted: "Distritos"
+      geozone_restricted: "Zonas"
       geozone_info: "Pueden participar las personas empadronadas en: "
       already_answer: "Ya has participado en esta votación"
       not_logged_in: "Necesitas iniciar sesión o registrarte para participar"
@@ -646,8 +659,9 @@ es:
         title: Votaciones
         help: Ayuda sobre las votaciones
       section_footer:
-        title: Ayuda sobre las votaciones
-        description: Las votaciones ciudadanas son un mecanismo de participación por el que la ciudadanía con derecho a voto puede tomar decisiones de forma directa.
+        title: Quien puede votar
+        description: Para participar en las votaciones tiene que estar registrado en Decide Puerto Real y verificar su cuenta.
+        description2: Pueden votar todas las personas empadronadas en la ciudad mayores de 16 años.
       no_polls: "No hay votaciones abiertas."
     show:
       already_voted_in_booth: "Ya has participado en esta votación en urnas presenciales, no puedes volver a participar."
