@@ -110,13 +110,11 @@
 
         <% unless @search_terms || @advanced_search_terms || @tag_filter %>
           <div id="section_help" class="margin" data-magellan-target="section_help">
-            <p class="lead">
-              <strong><%= t("proposals.index.section_footer.title") %></strong>
-            </p>
-            <ul style="list-style-type:disc;">
-              <li><p><%= t("proposals.index.section_footer.description") %></p></li>
-              <li><p><%= t("proposals.index.section_footer.description2") %></p></li>
-            </ul>
+<!--            <p class="lead">-->
+<!--              <strong><%#= t("proposals.index.section_footer.title") %></strong>-->
+<!--            </p>-->
+<!--            <p><%#= t("proposals.index.section_footer.description") %></p>-->
+            <%= render 'pages/help/proposals_text' %>
           </div>
         <% end %>
       </div>

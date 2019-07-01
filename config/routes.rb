@@ -49,4 +49,8 @@ Rails.application.routes.draw do
 
   # Static pages
   resources :pages, path: "/", only: [:show]
+
+  # Custom info pages
+  get "help/polls",     to: "pages#show", id: "help/_polls",     as: "help/polls"
+  get "help/proposals", to: "pages#show", id: "help/_proposals", as: "help/proposals"
 end

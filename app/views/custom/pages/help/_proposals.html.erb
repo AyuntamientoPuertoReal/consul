@@ -1,0 +1,28 @@
+<div class="row margin-top">
+  <div class="small-12 medium-3 column">
+    <%= back_link_to %>
+    <ul class="menu vertical margin-top">
+      <li>
+        <a href="#proposals"><strong>I. Propuestas</strong></a>
+        <ul class="nested vertical menu" style="margin-left:1rem; margin-top: 0;">
+          <li>
+            <a href="#section1">
+              <strong>I.1 ¿Cómo funcionan las propuestas ciudadanas?</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#section2">
+              <strong>I.2 Explicación detallada del proceso</strong>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="small-12 medium-9 column">
+    <h3 id="proposals" data-magellan-target="proposals">
+      Propuestas
+    </h3>
+    <%= render 'pages/help/proposals_text' %>
+  </div>
+</div>

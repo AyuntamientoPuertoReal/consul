@@ -1,6 +1,8 @@
 module Verification
   extend ActiveSupport::Concern
 
+  # AVISO: Restaurar los métodos comentados cuando Madrid implemente la opción de desactivar la verificación por SMS.
+
   included do
     scope :residence_verified, -> { where.not(residence_verified_at: nil) }
     scope :level_three_verified, -> { where.not(verified_at: nil) }
@@ -34,19 +36,34 @@ module Verification
     residence_verified_at.present?
   end
 
+  # def sms_verified?
+  #   return true if skip_verification?
+  #   confirmed_phone.present?
+  # end
+
   def sms_verified?
     return true if skip_verification?
-    confirmed_phone.present?
+    residence_verified?
   end
+
+  # def level_two_verified?
+  #   return true if skip_verification?
+  #   level_two_verified_at.present? || (residence_verified? && sms_verified?)
+  # end
 
   def level_two_verified?
     return true if skip_verification?
-    level_two_verified_at.present? || (residence_verified? && sms_verified?)
+    level_two_verified_at.present? || residence_verified?
   end
+
+  # def level_three_verified?
+  #   return true if skip_verification?
+  #   verified_at.present?
+  # end
 
   def level_three_verified?
     return true if skip_verification?
-    verified_at.present?
+    verified_at.present? || residence_verified?
   end
 
   def level_two_or_three_verified?
